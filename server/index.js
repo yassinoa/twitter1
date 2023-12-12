@@ -9,7 +9,7 @@ import cors from "cors"
 
 import ChatRoute from './Routes/ChatRoute.js'
 import MessageRoute from './Routes/MessageRoute.js'
-
+import path from 'path'
 // Routes
 
 const app = express();
@@ -40,3 +40,13 @@ mongoose
   app.use('/post', PostRoute)
   app.use('/chat',ChatRoute)
   app.use('/message',MessageRoute)
+
+  if (process.env.NODE_ENV === 'production') {
+    console.log("hi")
+    app.use(express.static(path.join(path.resolve(), '../client/build')));
+  
+    app.get('*', (req, res) =>
+      res.sendFile(path.resolve(path.resolve(), '../client', 'build', 'index.html'))
+    );
+  
+  }

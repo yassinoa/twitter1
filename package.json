@@ -1,0 +1,21 @@
+{
+  "name": "twiter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"cd server && npm install && cd .. && cd client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yassinoa/twitter1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yassinoa/twitter1/issues"
+  },
+  "homepage": "https://github.com/yassinoa/twitter1#readme"
+}

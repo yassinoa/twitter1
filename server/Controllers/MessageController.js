@@ -14,3 +14,14 @@ export const addMessage=async(req,res)=>{
     console.log(error)    
   }
 }
+
+export const getMessages=async(req,res)=>{
+  const {chatId} = req.params
+  try {
+    const result=await MessageModel.find({chatId})
+    res.status(200).json(result)
+  } catch (error) {
+    res.status(500).json(error)
+    
+  }
+}

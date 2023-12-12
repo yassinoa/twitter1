@@ -2,16 +2,20 @@
 import './ProfileCard.css'
 import cover from '../../img/cover.jpg'
 import profile from '../../img/profileImg.jpg'
+import { Link } from 'react-router-dom';
 
 const ProfilePage = true;
 const ProfileCard = () => {
   return (
     <div className="ProfileCard">
+        <Link to="/profile" >
       <div className="ProfileImages">
         <img src={cover} alt="" />
-        <img src={profile} alt="" />
+          <img src={profile} alt="" />
       </div>
+          </Link>
       <div className="ProfileName">
+        
         <span>yassin mas</span>
         <span>Tun sfax</span>
       </div>
